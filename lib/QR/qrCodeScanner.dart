@@ -34,7 +34,8 @@ class _QRCodeScannerState extends State<QRCodeScanner> {
             child: Center(
               child: (result != null)
                   ? displayToastMessage(
-                      "Code is Not ${merchantProfile(result.code)} Go Back",
+                      //"Code is Not ${merchantProfile(result.code)} Go Back",
+                      "Scan successful! Go Back",
                       context)
                   : displayToastMessage("Scan QR Code", context),
             ),
