@@ -1,4 +1,4 @@
-import 'package:ctracker/style/color.dart';
+import 'package:covilog/style/color.dart';
 import 'package:flutter/material.dart';
 
 TextStyle h1 = TextStyle(

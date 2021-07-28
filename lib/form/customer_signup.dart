@@ -1,7 +1,7 @@
 import 'dart:io';
-import 'package:ctracker/api/firebase_api.dart';
-import 'package:ctracker/style/color.dart';
-import 'package:ctracker/style/text_style.dart';
+import 'package:covilog/api/firebase_api.dart';
+import 'package:covilog/style/color.dart';
+import 'package:covilog/style/text_style.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';

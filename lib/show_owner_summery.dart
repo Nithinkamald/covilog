@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:ctracker/style/color.dart';
-import 'package:ctracker/style/text_style.dart';
+import 'package:covilog/style/color.dart';
+import 'package:covilog/style/text_style.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'package:flutter/material.dart';
