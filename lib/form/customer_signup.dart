@@ -24,10 +24,10 @@ class SignupForm extends StatelessWidget {
           },
         ),
         title: Text(
-          'Create Customer Account',
+          'CoviLog',
           style: h2,
         ),
-        backgroundColor: vilot,
+        backgroundColor: Colors.tealAccent[700],
       ),
       body: SingleChildScrollView(
         child: SignupFormContents(),
@@ -63,12 +63,12 @@ class _SignupFormContentsState extends State<SignupFormContents> {
             height: 24,
           ),
           Text(
-            'Signup to track your foot and confirm your footprint, with c-tracker.',
+            'Create Customer Account',
             textAlign: TextAlign.left,
             style: textBtn,
           ),
           SizedBox(
-            height: 8,
+            height: 16,
           ),
           TextFieldContainer(
             controller: nameTextEditingController,
@@ -102,43 +102,43 @@ class _SignupFormContentsState extends State<SignupFormContents> {
             eyeIcon: Icons.visibility,
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8),
+            padding: const EdgeInsets.symmetric(vertical: 5),
             child: ConstrainedBox(
               constraints: const BoxConstraints(
                 minWidth: double.infinity,
-                minHeight: 46,
+                minHeight: 10,
               ),
               // ignore: deprecated_member_use
-              child: FlatButton(
-                onPressed: selectFile,
-                color: Colors.white,
-                textColor: vilot,
-                child: Text(
-                  'Select Profile Image',
-                  style: button,
-                ),
-                shape: RoundedRectangleBorder(
-                  side: BorderSide(
-                    color: vilot,
-                    width: 2,
-                  ),
-                  borderRadius: BorderRadius.circular(6),
-                ),
-              ),
+              // child: FlatButton(
+              //   onPressed: selectFile,
+              //   color: Colors.white,
+              //   textColor: Colors.tealAccent[700],
+              //   child: Text(
+              //     'Select Profile Image',
+              //     style: button,
+              //   ),
+              //   shape: RoundedRectangleBorder(
+              //     side: BorderSide(
+              //       color: Colors.tealAccent[700],
+              //       width: 2,
+              //     ),
+              //     borderRadius: BorderRadius.circular(6),
+              //   ),
+              // ),
             ),
           ),
-          Text(
-            fileName,
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-          ),
+          // Text(
+          //   fileName,
+          //   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+          // ),
           Row(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Vaccinated',
+                'Vaccinated?',
                 textAlign: TextAlign.left,
-                style: bodytxtstyle,
+                style: textBtn,
               ),
               Row(
                 mainAxisSize: MainAxisSize.min,
@@ -158,7 +158,7 @@ class _SignupFormContentsState extends State<SignupFormContents> {
                     style: bodytxtstyle,
                   ),
                   Radio(
-                    activeColor: vilot,
+                    activeColor: Colors.tealAccent[700],
                     value: 'No',
                     groupValue: onOff,
                     onChanged: (val) {
@@ -180,7 +180,7 @@ class _SignupFormContentsState extends State<SignupFormContents> {
             child: ConstrainedBox(
               constraints: const BoxConstraints(
                 minWidth: double.infinity,
-                minHeight: 46,
+                minHeight: 45,
               ),
               // ignore: deprecated_member_use
               child: FlatButton(
@@ -202,10 +202,10 @@ class _SignupFormContentsState extends State<SignupFormContents> {
                   }
                   uploadFile();
                 },
-                color: vilot,
+                color: Colors.tealAccent[700],
                 textColor: Colors.white,
                 child: Text(
-                  'Lets Get Started',
+                  'Create Account',
                   style: button,
                 ),
                 shape: RoundedRectangleBorder(
@@ -214,35 +214,35 @@ class _SignupFormContentsState extends State<SignupFormContents> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8),
-            child: Row(
-              children: [
-                Text(
-                  'Have an account?',
-                  textAlign: TextAlign.left,
-                  style: bodytxtstyle,
-                ),
-                SizedBox(width: 4),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context, 'customer_login');
-                  },
-                  child: Text(
-                    'Login here.',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      color: vilot,
-                      fontFamily: 'Montserrat',
-                      fontSize: 19,
-                      fontWeight: FontWeight.w500,
-                      letterSpacing: -0.5,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.symmetric(vertical: 8),
+          //   child: Row(
+          //     children: [
+          //       Text(
+          //         'Have an account?',
+          //         textAlign: TextAlign.left,
+          //         style: bodytxtstyle,
+          //       ),
+          //       SizedBox(width: 4),
+          //       GestureDetector(
+          //         onTap: () {
+          //           Navigator.pushNamed(context, 'customer_login');
+          //         },
+          //         child: Text(
+          //           'Login here.',
+          //           textAlign: TextAlign.left,
+          //           style: TextStyle(
+          //             color: Colors.tealAccent[700],
+          //             fontFamily: 'Montserrat',
+          //             fontSize: 19,
+          //             fontWeight: FontWeight.w500,
+          //             letterSpacing: -0.5,
+          //           ),
+          //         ),
+          //       ),
+          //     ],
+          //   ),
+          // ),
         ],
       ),
     );
@@ -340,7 +340,7 @@ class _TextFieldContainerState extends State<TextFieldContainer> {
         child: FocusScope(
           child: Focus(
             child: TextField(
-              cursorColor: vilot,
+              cursorColor: Colors.tealAccent[700],
               controller: widget.controller,
               obscureText: widget.pass,
               keyboardType: widget.type,

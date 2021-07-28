@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
         'shop_owner_summery': (context) => ShopOwnerSummery(),
         'splash_screen': (context) => LoadingSplashScreen(),
       },
-      home: LoadingSplashScreen(),
+      home: Home(),
       debugShowCheckedModeBanner: false,
     );
   }
@@ -60,13 +60,10 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  // ignore: deprecated_member_use
   List<SliderModel> slides = new List<SliderModel>();
   int currentIndex = 0;
 
   void initState() {
-    // ignore: todo
-    // TODO: implement initState
     super.initState();
     slides = getSlides();
   }
@@ -78,7 +75,7 @@ class _HomeState extends State<Home> {
         height: isCurrentPage ? 8.0 : 6.0,
         width: isCurrentPage ? 8.0 : 6.0,
         decoration: BoxDecoration(
-          color: isCurrentPage ? vilot : greyShade,
+          color: isCurrentPage ? Colors.tealAccent[700] : greyShade,
           borderRadius: BorderRadius.circular(12),
         ),
       ),
@@ -133,7 +130,7 @@ class _HomeState extends State<Home> {
                   //       : Navigator.pushNamed(context, 'customer_login');
                   // });
                 },
-                color: vilot,
+                color: Colors.tealAccent[700],
                 textColor: Colors.white,
                 child: Text(
                   'Customer',
@@ -163,14 +160,14 @@ class _HomeState extends State<Home> {
                   // });
                 },
                 color: Colors.white,
-                textColor: vilot,
+                textColor: Colors.tealAccent[700],
                 child: Text(
                   'Shop Owner',
                   style: button,
                 ),
                 shape: RoundedRectangleBorder(
                   side: BorderSide(
-                    color: vilot,
+                    color: Colors.tealAccent[700],
                     width: 2,
                   ),
                   borderRadius: BorderRadius.circular(6),

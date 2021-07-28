@@ -20,10 +20,10 @@ class CustomerLoginForm extends StatelessWidget {
           },
         ),
         title: Text(
-          'Login as Customer',
+          'CoviLog',
           style: h2,
         ),
-        backgroundColor: vilot,
+        backgroundColor: Colors.tealAccent[700],
       ),
       body: SingleChildScrollView(
         child: CustomerLoginFormContents(),
@@ -53,12 +53,13 @@ class _CustomerLoginFormContentsState extends State<CustomerLoginFormContents> {
             height: 24,
           ),
           Text(
-            'Welcome back! Please login to continue.',
+            //'Welcome back! Please login to continue.',
+            'Login as Customer',
             textAlign: TextAlign.left,
             style: textBtn,
           ),
           SizedBox(
-            height: 8,
+            height: 16,
           ),
           TextFieldContainer(
             controller: emailTextEditingController,
@@ -73,16 +74,16 @@ class _CustomerLoginFormContentsState extends State<CustomerLoginFormContents> {
             pass: true,
             eyeIcon: Icons.visibility,
           ),
+          // SizedBox(
+          //   height: 8,
+          // ),
+          // Text(
+          //   'Forgot password?',
+          //   textAlign: TextAlign.right,
+          //   style: bodytxtstyle,
+          // ),
           SizedBox(
-            height: 8,
-          ),
-          Text(
-            'Forgot password?',
-            textAlign: TextAlign.right,
-            style: bodytxtstyle,
-          ),
-          SizedBox(
-            height: 8,
+            height: 16,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 8),
@@ -102,7 +103,7 @@ class _CustomerLoginFormContentsState extends State<CustomerLoginFormContents> {
                     loginAndAuthenticateUser(context);
                   }
                 },
-                color: vilot,
+                color: Colors.tealAccent[700],
                 textColor: Colors.white,
                 child: Text(
                   'Login',
@@ -132,7 +133,7 @@ class _CustomerLoginFormContentsState extends State<CustomerLoginFormContents> {
                     'Create one',
                     textAlign: TextAlign.left,
                     style: TextStyle(
-                      color: vilot,
+                      color: Colors.tealAccent[700],
                       fontFamily: 'Montserrat',
                       fontSize: 19,
                       fontWeight: FontWeight.w500,

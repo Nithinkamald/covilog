@@ -43,7 +43,6 @@ class _ShopOwnerSummeryState extends State<ShopOwnerSummery> {
       child: ListTile(
         //tileColor: Colors.grey,
         leading: CircleAvatar(
-          //backgroundColor: Color(0xff754EE4),
           radius: 26.0,
           backgroundImage: NetworkImage(
               'https://firebasestorage.googleapis.com/v0/b/c-tracker-2021.appspot.com/o/files%2F' +
@@ -96,7 +95,7 @@ class _ShopOwnerSummeryState extends State<ShopOwnerSummery> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: vilot,
+        backgroundColor: Colors.tealAccent[700],
         title: Text(
           'Summery',
           style: h2,

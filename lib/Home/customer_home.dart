@@ -39,18 +39,18 @@ class _CustomerHomeState extends State<CustomerHome> {
 
   Widget _buildContactItem({Map contact}) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8),
+      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 25),
       child: ListTile(
         //tileColor: Colors.grey,
-        leading: CircleAvatar(
-          //backgroundColor: Color(0xff754EE4),
-          radius: 26.0,
-          backgroundImage: NetworkImage(
-              'https://firebasestorage.googleapis.com/v0/b/c-tracker-2021.appspot.com/o/files%2F' +
-                  contact['email'] +
-                  '?alt=media&token=a2d4e1d0-202e-49c4-86b7-59df731559b3'),
-          backgroundColor: Colors.transparent,
-        ),
+        // leading: CircleAvatar(
+        //   //backgroundColor: Color(0xff754EE4),
+        //   radius: 26.0,
+        //   backgroundImage: NetworkImage(
+        //       'https://firebasestorage.googleapis.com/v0/b/c-tracker-2021.appspot.com/o/files%2F' +
+        //           contact['email'] +
+        //           '?alt=media&token=a2d4e1d0-202e-49c4-86b7-59df731559b3'),
+        //   backgroundColor: Colors.transparent,
+        // ),
         title: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -106,12 +106,15 @@ class _CustomerHomeState extends State<CustomerHome> {
             // return CircularProgressIndicator();
           }
           return Scaffold(
-            floatingActionButton: FloatingActionButton(
-              onPressed: () {
-                Navigator.pushNamed(context, 'qr_code_scanner');
-              },
-              backgroundColor: vilot,
-              child: Icon(Icons.qr_code),
+            floatingActionButton: Padding(
+              padding: const EdgeInsets.all(25.0),
+              child: FloatingActionButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, 'qr_code_scanner');
+                },
+                backgroundColor: Colors.tealAccent[700],
+                child: Icon(Icons.qr_code),
+              ),
             ),
             appBar: AppBar(
               // leading: Container(
@@ -121,10 +124,13 @@ class _CustomerHomeState extends State<CustomerHome> {
               //     color: Colors.white,
               //   ),
               // ),
-              backgroundColor: vilot,
-              title: Text(
-                'My Footprints',
-                style: h2,
+              backgroundColor: Colors.tealAccent[700],
+              title: Padding(
+                padding: const EdgeInsets.only(left: 25.0),
+                child: Text(
+                  'CoviLog',
+                  style: h2,
+                ),
               ),
               automaticallyImplyLeading: false,
               actions: [
@@ -151,19 +157,11 @@ class _CustomerHomeState extends State<CustomerHome> {
                       value: "signout",
                     ),
                   ],
-                  child: CircleAvatar(
-                    //backgroundColor: Colors.white,
-                    radius: 18.0,
-                    backgroundImage: NetworkImage(
-                        'https://firebasestorage.googleapis.com/v0/b/c-tracker-2021.appspot.com/o/files%2F' +
-                            snapshot.data.value['email'] +
-                            '?alt=media&token=a2d4e1d0-202e-49c4-86b7-59df731559b3'),
-                    backgroundColor: Colors.transparent,
-                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(right:25.0),
+                    child: Icon(Icons.logout),
+                  )
                 ),
-                SizedBox(
-                  width: 16,
-                )
               ],
             ),
             body: Container(
@@ -177,6 +175,7 @@ class _CustomerHomeState extends State<CustomerHome> {
                 },
               ),
             ),
+            
           );
         });
   }
