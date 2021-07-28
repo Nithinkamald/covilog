@@ -39,10 +39,9 @@ class ShopOwnerHomeBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
+    return Center(
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+        //crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           FutureBuilder<dynamic>(
@@ -59,10 +58,6 @@ class ShopOwnerHomeBody extends StatelessWidget {
                     leading: Container(
                       child: CircleAvatar(
                         radius: 25.0,
-                        backgroundImage: NetworkImage(
-                            'https://firebasestorage.googleapis.com/v0/b/c-tracker-2021.appspot.com/o/files%2F' +
-                                snapshot.data.value['email'] +
-                                '?alt=media&token=a2d4e1d0-202e-49c4-86b7-59df731559b3'),
                         backgroundColor: Colors.transparent,
                       ),
                     ),
@@ -99,8 +94,8 @@ class ShopOwnerHomeBody extends StatelessWidget {
             height: 40,
           ),
           Text(
-            'Scan and confirm your footprint. Your deatils will be entered to the visitors list.',
-            textAlign: TextAlign.center,
+            'Scan the QR code to enter',
+            //textAlign: TextAlign.center,
             style: bodytxtstyle,
           ),
           Padding(
@@ -117,10 +112,10 @@ class ShopOwnerHomeBody extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, 'shop_owner_summery');
                 },
-                color: vilot,
+                color: Colors.tealAccent[700],
                 textColor: Colors.white,
                 child: Text(
-                  'Summery',
+                  'Customer Log',
                   style: button,
                 ),
                 shape: RoundedRectangleBorder(
@@ -148,7 +143,7 @@ class ShopOwnerHomeBody extends StatelessWidget {
               'Signout',
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: vilot,
+                color: Colors.tealAccent[700],
                 fontFamily: 'Montserrat',
                 fontSize: 16,
                 fontWeight: FontWeight.w500,

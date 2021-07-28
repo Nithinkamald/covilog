@@ -25,10 +25,10 @@ class ShopSignupForm extends StatelessWidget {
           },
         ),
         title: Text(
-          'Create Shop Account',
+          'Covilog',
           style: h2,
         ),
-        backgroundColor: vilot,
+        backgroundColor: Colors.tealAccent[700],
       ),
       body: SingleChildScrollView(
         child: SignupFormContents(),
@@ -54,7 +54,6 @@ class _SignupFormContentsState extends State<SignupFormContents> {
   File file;
   @override
   Widget build(BuildContext context) {
-    final fileName = file != null ? basename(file.path) : 'No File Selected';
 
     return Padding(
       padding: const EdgeInsets.all(16.0),
@@ -65,7 +64,7 @@ class _SignupFormContentsState extends State<SignupFormContents> {
             height: 24,
           ),
           Text(
-            'Signup to collect footprints. Follow covid protocols with c-tracker.',
+            'Create Shop Account',
             textAlign: TextAlign.left,
             style: textBtn,
           ),
@@ -103,38 +102,9 @@ class _SignupFormContentsState extends State<SignupFormContents> {
             pass: true,
             eyeIcon: Icons.visibility,
           ),
+          
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8),
-            child: ConstrainedBox(
-              constraints: const BoxConstraints(
-                minWidth: double.infinity,
-                minHeight: 46,
-              ),
-              // ignore: deprecated_member_use
-              child: FlatButton(
-                onPressed: selectFile,
-                color: Colors.white,
-                textColor: vilot,
-                child: Text(
-                  'Select Profile Image',
-                  style: button,
-                ),
-                shape: RoundedRectangleBorder(
-                  side: BorderSide(
-                    color: vilot,
-                    width: 2,
-                  ),
-                  borderRadius: BorderRadius.circular(6),
-                ),
-              ),
-            ),
-          ),
-          Text(
-            fileName,
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8),
+            padding: const EdgeInsets.symmetric(vertical: 30.0),
             child: ConstrainedBox(
               constraints: const BoxConstraints(
                 minWidth: double.infinity,
@@ -144,8 +114,7 @@ class _SignupFormContentsState extends State<SignupFormContents> {
               child: FlatButton(
                 onPressed: () {
                   if (nameTextEditingController.text.length < 3) {
-                    displayToastMessage(
-                        "name must be atleast 3 character", context);
+                    displayToastMessage("name must be atleast 3 character", context);
                   } else if (!emailTextEditingController.text.contains("@")) {
                     displayToastMessage("Email address is not valid", context);
                   } else if (shopnameTextEditingController.text.isEmpty) {
@@ -160,45 +129,16 @@ class _SignupFormContentsState extends State<SignupFormContents> {
                   }
                   uploadFile();
                 },
-                color: vilot,
+                color: Colors.tealAccent[700],
                 textColor: Colors.white,
                 child: Text(
-                  'Lets Get Started',
+                  'Create Account',
                   style: button,
                 ),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(6),
                 ),
               ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8),
-            child: Row(
-              children: [
-                Text(
-                  'Have an account?',
-                  textAlign: TextAlign.left,
-                  style: bodytxtstyle,
-                ),
-                SizedBox(width: 4),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context, 'shop_owner_login');
-                  },
-                  child: Text(
-                    'Login here.',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      color: vilot,
-                      fontFamily: 'Montserrat',
-                      fontSize: 19,
-                      fontWeight: FontWeight.w500,
-                      letterSpacing: -0.5,
-                    ),
-                  ),
-                ),
-              ],
             ),
           ),
         ],
