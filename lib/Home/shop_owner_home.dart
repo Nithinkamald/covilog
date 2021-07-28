@@ -1,4 +1,3 @@
-import 'package:covilog/style/color.dart';
 import 'package:covilog/style/text_style.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';

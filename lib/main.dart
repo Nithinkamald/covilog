@@ -6,7 +6,7 @@ import 'package:covilog/Home/shop_owner_home.dart';
 import 'package:covilog/form/customer_login.dart';
 import 'package:covilog/form/customer_signup.dart';
 import 'package:covilog/model/model.dart';
-import 'package:covilog/show_owner_summery.dart';
+import 'package:covilog/customer_log.dart';
 import 'package:covilog/splash%20screens/loading_splash.dart';
 import 'package:covilog/style/color.dart';
 import 'package:covilog/style/text_style.dart';
@@ -60,6 +60,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  // ignore: deprecated_member_use
   List<SliderModel> slides = new List<SliderModel>();
   int currentIndex = 0;
 
@@ -124,11 +125,6 @@ class _HomeState extends State<Home> {
               child: FlatButton(
                 onPressed: () {
                   Navigator.pushNamed(context, 'customer_login');
-                  // getValidationData().whenComplete(() async {
-                  //   (finalValue == 1)
-                  //       ? Navigator.pushNamed(context, 'customer_home_screen')
-                  //       : Navigator.pushNamed(context, 'customer_login');
-                  // });
                 },
                 color: Colors.tealAccent[700],
                 textColor: Colors.white,
@@ -153,11 +149,6 @@ class _HomeState extends State<Home> {
               child: FlatButton(
                 onPressed: () {
                   Navigator.pushNamed(context, 'shop_owner_login');
-                  // getValidationData().whenComplete(() async {
-                  //   (finalValue == 2)
-                  //       ? Navigator.pushNamed(context, 'shop_owner_summery')
-                  //       : Navigator.pushNamed(context, 'shop_owner_login');
-                  // });
                 },
                 color: Colors.white,
                 textColor: Colors.tealAccent[700],

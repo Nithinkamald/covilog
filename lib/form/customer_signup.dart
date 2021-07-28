@@ -108,29 +108,8 @@ class _SignupFormContentsState extends State<SignupFormContents> {
                 minWidth: double.infinity,
                 minHeight: 10,
               ),
-              // ignore: deprecated_member_use
-              // child: FlatButton(
-              //   onPressed: selectFile,
-              //   color: Colors.white,
-              //   textColor: Colors.tealAccent[700],
-              //   child: Text(
-              //     'Select Profile Image',
-              //     style: button,
-              //   ),
-              //   shape: RoundedRectangleBorder(
-              //     side: BorderSide(
-              //       color: Colors.tealAccent[700],
-              //       width: 2,
-              //     ),
-              //     borderRadius: BorderRadius.circular(6),
-              //   ),
-              // ),
             ),
           ),
-          // Text(
-          //   fileName,
-          //   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-          // ),
           Row(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -214,35 +193,6 @@ class _SignupFormContentsState extends State<SignupFormContents> {
               ),
             ),
           ),
-          // Padding(
-          //   padding: const EdgeInsets.symmetric(vertical: 8),
-          //   child: Row(
-          //     children: [
-          //       Text(
-          //         'Have an account?',
-          //         textAlign: TextAlign.left,
-          //         style: bodytxtstyle,
-          //       ),
-          //       SizedBox(width: 4),
-          //       GestureDetector(
-          //         onTap: () {
-          //           Navigator.pushNamed(context, 'customer_login');
-          //         },
-          //         child: Text(
-          //           'Login here.',
-          //           textAlign: TextAlign.left,
-          //           style: TextStyle(
-          //             color: Colors.tealAccent[700],
-          //             fontFamily: 'Montserrat',
-          //             fontSize: 19,
-          //             fontWeight: FontWeight.w500,
-          //             letterSpacing: -0.5,
-          //           ),
-          //         ),
-          //       ),
-          //     ],
-          //   ),
-          // ),
         ],
       ),
     );

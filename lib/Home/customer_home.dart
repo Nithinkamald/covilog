@@ -1,5 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:covilog/style/color.dart';
 import 'package:covilog/style/text_style.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
@@ -41,16 +40,6 @@ class _CustomerHomeState extends State<CustomerHome> {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 25),
       child: ListTile(
-        //tileColor: Colors.grey,
-        // leading: CircleAvatar(
-        //   //backgroundColor: Color(0xff754EE4),
-        //   radius: 26.0,
-        //   backgroundImage: NetworkImage(
-        //       'https://firebasestorage.googleapis.com/v0/b/c-tracker-2021.appspot.com/o/files%2F' +
-        //           contact['email'] +
-        //           '?alt=media&token=a2d4e1d0-202e-49c4-86b7-59df731559b3'),
-        //   backgroundColor: Colors.transparent,
-        // ),
         title: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,

@@ -1,5 +1,4 @@
 import 'package:covilog/form/customer_signup.dart';
-import 'package:covilog/style/color.dart';
 import 'package:covilog/style/text_style.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -74,14 +73,6 @@ class _CustomerLoginFormContentsState extends State<CustomerLoginFormContents> {
             pass: true,
             eyeIcon: Icons.visibility,
           ),
-          // SizedBox(
-          //   height: 8,
-          // ),
-          // Text(
-          //   'Forgot password?',
-          //   textAlign: TextAlign.right,
-          //   style: bodytxtstyle,
-          // ),
           SizedBox(
             height: 16,
           ),
