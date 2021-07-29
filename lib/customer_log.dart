@@ -36,11 +36,9 @@ class _ShopOwnerSummeryState extends State<ShopOwnerSummery> {
   }
 
   Widget _buildContactItem({Map contact}) {
-    // if (contact["vacc"])
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 25),
       child: ListTile(
-        //tileColor: Colors.grey,
         title: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -91,22 +89,6 @@ class _ShopOwnerSummeryState extends State<ShopOwnerSummery> {
           'Customer Log',
           style: h2,
         ),
-        // automaticallyImplyLeading: true,
-        // actions: [
-        //   Container(
-        //     margin: EdgeInsets.only(
-        //       right: 16,
-        //     ),
-        //     child: GestureDetector(
-        //       onTap: () {
-        //         print('Filter');
-        //       },
-        //       child: Icon(
-        //         Icons.filter_list,
-        //       ),
-        //     ),
-        //   ),
-        // ],
       ),
       body: Container(
         height: double.infinity,
